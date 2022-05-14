@@ -1,0 +1,55 @@
+{{>header_user}}
+<div class="column">
+            <h1>Book Your Journey</h1>
+            <center>
+            <form class="column container" action = "" method = "POST" id="form">
+                
+                {{!-- <select  id="source" name="source" required>
+                    <option  selected="" disabled="">Select Source Airport</option>
+                    {{#each srcairport}}
+                        {{#each this}}
+                            <option value={{this}}>{{this}}</option>
+                        {{/each}}
+                    {{/each}}
+                </select> <br><br>   --}}
+            
+                {{!-- <select  id="destination" name="destination" required>
+                    <option selected="" disabled="">Select Destination Airport</option>
+                     {{#each dstairport}}
+                        {{#each this}}
+                            <option value={{this}}>{{this}}</option>
+                        {{/each}}
+                    {{/each}}
+                </select> <br><br>  --}}
+
+                    <label>Enter the flight ID:</label>
+                    <input name="flight_id" type="number">
+                    <br><br>
+                    
+                    <label>Number of seats:</label>
+                    <input name="no_of_seat" type="number" value=0>
+                    <br><br>
+
+                    <label>Passanger name:</label>
+                    <input name="psg_name" type="text">
+                    <br><br>
+
+                    <label>Passanger email:</label>
+                    <input name="psg_email" type="email">
+                    <br><br>
+
+                    <label>Age</label>
+                    <input name="psg_age" type="text" >
+                    <br><br>
+
+                <select style="background-color:#2196F3!important; " id="class" name="tkt_class" required>
+                  <option value=0>Economy Class</option>
+                  <option value=1>Business Class</option>
+                </select> <br><br>  
+                <label>Date of Departure:</label>
+                <input name = "date_of_depart" type= "date" required ><br><br>
+                <button class="btn success" type = "Submit">Book Flight</button>
+                <button class="btn danger" type ="reset">Clear Entries</button>
+            </form>
+        </center>
+        </div>

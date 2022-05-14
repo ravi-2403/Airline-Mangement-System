@@ -1,0 +1,27 @@
+{{>header}}
+<center>
+    <h2 class="header">New Flights </h2>
+	<form action = "" method = "POST" class="container" style="max-width: 500px!important;">
+		{{!-- <input required name="fid" type="number" placeholder="Flight ID"><br> --}}
+		<select name="src" id="" required >
+				<option>Select source</option>
+			{{#each airport_name}}
+				<option value={{this}}>{{this}}</option>
+			{{/each}}
+		</select><br><br>
+		<select name="dst" id="" required>
+				<option>Select destination</option>
+			{{#each airport_name}}
+				<option value={{this}}>{{this}}</option>
+			{{/each}}
+		</select><br><br>
+		<input required name="fdate" type="date" placeholder="Date"><br>
+		<input required name="time" type="time" placeholder="Time"><br>
+		<input required name="airname" type="text" placeholder="Aircraft name"><br>
+		<input required name="ecfare" type="number" placeholder="Economy Fare"><br>
+		<input required name="bcfare" type="number" placeholder="Bussiness Fare"><br>
+		<input required name="seats" type="number" placeholder="Seats"><br>
+		<button class="btn success" type = "submit">Add Flight</button>
+		<button class="btn danger" type = "reset">ClearEntries</button>
+	</form>
+</center>

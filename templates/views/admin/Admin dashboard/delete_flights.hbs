@@ -1,0 +1,11 @@
+{{>header}}
+<center>
+    <h2 class="header">Delete Existing Flights</h2>
+		<form action = "/delete_flights" method = "POST" class="container">
+			<label>PlaneID:</label>
+			<input name = "pid" placeholder="Registration Number" required type="text"><br><br>
+			<br><br> 
+			<button class="btn danger"   type = "submit">Delete</button>
+			<button class="btn info"   type = "reset">ClearEntries</button>
+		</form>
+</center>

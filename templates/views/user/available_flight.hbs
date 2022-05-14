@@ -1,0 +1,77 @@
+{{>header_msg}}
+<link rel="stylesheet"
+			href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity=
+"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous" />
+<style>
+    thead{
+        height: 80px;
+    }
+    tr{
+        height: 50px;
+    }
+    thead,tr,td{
+        text-align: center;
+        font-family: sans-serif;
+    }
+</style>
+<div class="name">
+    <form action="" method="post">
+        <table class="main-table">
+        <thead>
+            <td>flight id</td>
+            <td>source</td>
+            <td>Destination</td>
+            <td>Date</td>
+            <td>Departure Time</td>
+            <td>Aircraft Name</td>
+            <td>Economy Fare</td>
+            <td>Bussiness Fare</td>
+            <td>Seats</td>
+            {{!-- <td>Book</td> --}}
+        </thead>
+        {{#each flight}}
+            <tr id="{{this.fid}}">
+                <td class="row-data">{{this.fid}}</td>
+                <td class="row-data">{{this.source}}</td>
+                <td class="row-data">{{this.dest}}</td>
+                <td class="row-data">{{this.fdate}}</td>
+                <td class="row-data">{{this.time}}</td>
+                <td class="row-data">{{this.fname}}</td>
+                <td class="row-data">{{this.ECfare}}</td>
+                <td class="row-data">{{this.BCfare}}</td>
+                <td class="row-data">{{this.seats}}</td>
+                {{!-- <td><a href=""><button id={{this.fid}} >Book</button></a></td> --}}
+                {{!-- <td><input type="button" value="Book" onclick="()=>{console.log("I am ravi")}"></td> --}}
+            </tr>
+        {{/each}}
+    </table>
+    </form>
+
+    <br><br><br>
+
+</div>
+
+<center>
+    <a href="/book_flight"><button>Proceed for booking!!!!</button></a>
+</center>
+
+{{!-- <script>
+			function show() {
+				var rowId =
+					event.target.parentNode.parentNode.id;
+			//this gives id of tr whose button was clicked
+				var data =
+document.getElementById(rowId).querySelectorAll(".row-data");
+			/*returns array of all elements with
+			"row-data" class within the row with given id*/
+
+				//var name = data[0].innerHTML;
+				//var age = data[1].innerHTML;
+                console.log(data)
+
+				//alert("Name: " + name + "\nAge: " + age);
+			}
+</script> --}}

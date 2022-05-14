@@ -1,0 +1,41 @@
+{{>header}}
+<style>
+    thead{
+        height: 80px;
+    }
+    tr{
+        height: 50px;
+    }
+    thead,tr,td{
+        text-align: center;
+        font-family: sans-serif;
+    }
+</style>
+<div class="name">
+    <table>
+        <thead>
+            <td>flight id</td>
+            <td>source</td>
+            <td>Destination</td>
+            <td>Date</td>
+            <td>Departure Time</td>
+            <td>Aircraft Name</td>
+            <td>Economy Fare</td>
+            <td>Bussiness Fare</td>
+            <td>Seats</td>
+        </thead>
+        {{#each data}}
+            <tr>
+                <td>{{this.fid}}</td>
+                <td>{{this.source}}</td>
+                <td>{{this.dest}}</td>
+                <td>{{this.fdate}}</td>
+                <td>{{this.time}}</td>
+                <td>{{this.fname}}</td>
+                <td>{{this.ECfare}}</td>
+                <td>{{this.BCfare}}</td>
+                <td>{{this.seats}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

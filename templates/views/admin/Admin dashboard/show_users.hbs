@@ -1,0 +1,25 @@
+{{>header}}
+<style>
+    thead{
+        height: 80px;
+    }
+    tr{
+        height: 50px;
+    }
+    thead,tr,td{
+        text-align: center;
+        font-family: sans-serif;
+    }
+</style>
+<div class="name">
+    <table>
+        <thead>
+            <td>User ID</td>
+            <td>Name</td>
+            <td>Email ID</td>
+        </thead>
+        {{#each data}}
+            <tr> <td>{{this.user_id}}</td> <td>{{this.name}}</td> <td>{{this.email}}</td> </tr>
+        {{/each}}
+    </table>
+</div>

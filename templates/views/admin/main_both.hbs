@@ -1,0 +1,35 @@
+<html>
+  <title>Welcome</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="styles/layputstyles_user.css" />
+  <body>
+    <center>
+      <div
+        style="text-align: center;
+            position: absolute;
+            top:  50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 75%;
+        "
+      >
+        <ul>
+          <li><a href="/user_dashboard"><button class="btnsubmit info">User
+                Panel</button></a></li>
+          <li><a href="/admin_home"><button class="btnsubmit info">Admin Panel</button></a></li>
+          <li>
+            <a href="/login"><button class="btnsubmit info">Log Out</button></a></li>
+        </ul>
+      </div>
+    </center>
+  </body>
+  {{! <script type="text/javascript">
+    const preback = ()=>{
+        window.history.forward();
+        window.history.backward();
+    }
+    setTimeout("preback()",0);
+    window.onunload=()=>{null};
+</script> }}
+</html>

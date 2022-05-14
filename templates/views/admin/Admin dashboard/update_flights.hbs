@@ -1,0 +1,15 @@
+{{>header}}
+<center>
+    <h2 class="header">Update fare</h2>
+		<form action = "/update_flights" method = "POST" class="container">
+			<label>PlaneID:</label>
+			<input name = "plane_id" type="text" placeholder="Registration Number" required><br><br>
+			 
+			<label>Increased or Decreased to Price &#x20b9</label>
+			<input type="number" name="economy_fare" placeholder="Economy class"required><br><br>
+			<label>Increased or Decreased to Price &#x20b9</label>
+			<input type="number" name="business_fare"placeholder="Business class" required><br><br>
+			<button class="btn success" type = "submit">Update Fare</button>
+			<button class="btn info" type = "reset">ClearEntries</button>
+		</form>
+</center>

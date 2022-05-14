@@ -1,0 +1,36 @@
+{{>header_user}}
+<div class="column">
+            <h1>Check Running Flights</h1>
+            <center>
+            <form class="column container" action = "" method = "POST" id="form">
+                
+                <select  id="source_s" name="source" required>
+                    <option  selected="" disabled="">Select Source Airport</option>
+                    {{#each srcairport}}
+                        {{#each this}}
+                            <option value={{this}}>{{this}}</option>
+                        {{/each}}
+                    {{/each}}
+                </select> <br><br>  
+            
+                <select  id="destination_d" name="destination" required>
+                    <option selected="" disabled="">Select Destination Airport</option>
+                    {{#each dstairport}}
+                        {{#each this}}  
+                            <option value={{this}}>{{this}}</option>
+                        {{/each}}
+                    {{/each}}
+                </select> <br><br> 
+                
+                <select style="background-color:#2196F3!important; " id="class" name="class" >
+                  <option value="economy">Economy Class</option>
+                  <option value="business">Business Class</option>
+                  {{!-- <option value="first">First Class</option> --}}
+                </select> <br><br>
+                <label>Date of Departure:</label>
+                <input name = "date_of_depart" type= "date" required ><br><br>
+                <button class="btn success" type = "Submit" href="/check_flight/available_flight">Check Flights</button>
+                <button class="btn danger" type ="reset">Clear Entries</button>
+            </form>
+        </center>
+        </div>
